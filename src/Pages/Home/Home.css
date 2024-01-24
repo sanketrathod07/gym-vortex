@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+.HomeMain {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.39);
+    width: 100%;
+}
+
+.HomeBGVideo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+}
+
+.page1 {
+    height: 100vh;
+    /* width: 99.6vw; */
+    position: relative;
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+.HomeTextContain {
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.page1 h1 {
+    font-size: 6.5vw;
+    font-weight: 900;
+    position: relative;
+}
+
+.page1 h1::before {
+    content: "TRAIN. REFUEL. PLAY.";
+    position: absolute;
+    color: #000;
+    top: -2px;
+    left: -7px;
+    -webkit-text-stroke: 0.5px #95c11e;
+    z-index: -1;
+}
+
+.page1 h2 {
+    font-size: 2.5vw;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page1 p {
+    font-size: 1vw;
+    font-weight: 500;
+    width: 40%;
+}
+
+*::selection {
+    background-color: #fff;
+    color: #95c11e;
+}
+
+.page1 .arrow {
+    height: 20rem;
+    width: 20rem;
+    background-color: transparent;
+    border: 2px solid #95c11e;
+    position: absolute;
+    display: flex;
+    left: -1%;
+    bottom: 0%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all ease 0.5s;
+}
+
+.page1 .arrow:hover {
+    scale: 0.4;
+    background-color: #95c11e;
+}
+
+/* PAGE 2 CSS */
+.page2 {
+    /* height: 60vh; */
+    width: 99vw;
+    margin: 7rem 0rem;
+}
+
+.scroller {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in {
+    display: flex;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller-in h4 {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: 'Archivo Black', sans-serif;
+    margin-right: 2rem;
+    color: #000;
+    -webkit-text-stroke: 1px #ffffff;
+}
+
+.scroller-in h4:hover {
+    -webkit-text-stroke: 1px #95c11e;
+    color: #95c11e;
+}
+
+
+
+/* FOOTER CSS CODE */
+
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+    z-index: 100;
+    flex-direction: column;
+}
+
+#footer>img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+}
+
+.SubFooter1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.FooterLogoMain {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 6vw;
+    width: 21vw;
+}
+
+.FooterLogo {
+    height: 6vw;
+    width: 21vw;
+}
+
+.mapHeader {
+    font-size: 1vw;
+    text-transform: uppercase;
+    margin: 1rem 0rem;
+}
+
+.map {
+    flex: 1;
+}
+
+.Footertitle {
+    font-size: 2vw;
+    color: black;
+    text-decoration: underline;
+}
+
+.FooterDescription {
+    color: #000;
+}
+
+.FooterDescription span {
+    color: #ff0000;
+    font-weight: 900;
+    text-decoration: underline;
+}
+
+.FooterIcon {
+    height: 10rem;
+}
+
+/* News Card Animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/* Page 3 CSS Code  */
+
+.page3 {
+    height: 100vh;
+}
+
+
+
+
+
+
+
+/* All Media Queries */
+
+/* Responsive changes for screens below 1000px */
+@media (max-width: 1000px) {
+    .page1 h2 {
+        font-size: 3vw;
+    }
+
+    .page1 h1 {
+        width: 80%;
+    }
+
+    .page1 {
+        justify-content: flex-start;
+        top: 30vh;
+    }
+
+    .page1 .arrow {
+        bottom: 30%;
+    }
+}
+
+@media (max-width:700px) {
+    .HomeMain {
+        height: 350%;
+        width: 159%;
+    }
+
+    .page2 {
+        width: 157vw;
+        margin-top: 81%;
+    }
+
+    .aboutImg {
+        height: 75vw;
+        width: 119vw;
+    }
+
+    .aboutMainHeader {
+        font-size: 12.2vw;
+    }
+
+    .aboutTextContain .aboutP {
+        font-size: 5vw;
+    }
+
+    .page1 h1 {
+        font-size: 18.5vw;
+    }
+
+    .page1 h2 {
+        font-size: 8vw;
+    }
+
+    .page1 p {
+        font-size: 4vw;
+        font-weight: 500;
+        width: 75%;
+    }
+
+    .page1 .arrow {
+        bottom: 3%;
+    }
+
+
+
+    .SubFooter1 {
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .map {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .mapHeader {
+        font-size: 5vw;
+        text-transform: uppercase;
+        margin: 1rem 0rem;
+        color: #000;
+    }
+    
+    
+    .FooterLogo {
+        height: 30vw;
+        width: 100vw;
+    }
+    .FooterLogoMain {
+        display: flex;
+        flex: 1 1;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        align-content: center;
+        text-align: center;
+        margin: 4rem 0rem;
+    }
+    .FooterDescription {
+        color: #000;
+        font-size: 4vw;
+    }
+    #footer {
+        height: auto;
+    }
+}
