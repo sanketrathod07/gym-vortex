@@ -20,6 +20,7 @@
     justify-content: space-around;
     align-items: center;
 }
+
 /* .navigationBar.active{
     background-color: rgba(0, 0, 0, 0.768);
 } */
@@ -28,7 +29,7 @@
     display: flex;
     flex: 1;
     justify-content: center;
-    
+
     .Logo {
         height: 10vh;
     }
@@ -51,8 +52,12 @@
     }
 }
 
-.MobileMenu{
+.MobileMenu {
     display: none;
+}
+.mobileMenuDiv{
+    display: none;
+    transform: translateY(0%);
 }
 
 
@@ -64,6 +69,7 @@
     .NavUl {
         flex: 2;
     }
+
     .NavLi {
         margin-right: 9rem;
     }
@@ -75,23 +81,25 @@
     .logoDiv .Logo {
         height: 7vh;
     }
-    .NavUl .NavLi{
+
+    .NavUl .NavLi {
         margin-right: 4rem;
     }
 }
 
 /* Responsive changes for screens below 1200px */
 @media (max-width: 1200px) {
-    .logoDiv{
+    .logoDiv {
         flex: 1.5;
     }
 }
 
 /* Responsive changes for screens below 970px */
 @media (max-width: 970px) {
-    .NavUl .NavLi{
+    .NavUl .NavLi {
         margin-right: 2rem;
     }
+
     /* .NavUl .NavLi:nth-child(4){
         display: none;
     } */
@@ -106,21 +114,51 @@
     .NavUl {
         display: none;
     }
+
     .NavLi {
-        margin-right: 0; 
-        text-align: center; 
+        margin-right: 0;
+        text-align: center;
         width: 100%;
     }
-    .MobileMenu{
+
+    .MobileMenu {
         display: flex;
         flex: 0.5;
         justify-content: space-evenly;
     }
 
-    .logoDiv{
+    .logoDiv {
         flex: 1.5;
     }
+
     .logoDiv .Logo {
         height: 6.5vh;
+    }
+
+    .mobileMenuDiv {
+        display: flex;
+        position: fixed;
+        z-index: 100;
+        top: 5rem;
+        background-image: linear-gradient(#ffffff1a, #00000060);
+        width: 100vw;
+        transform: translateY(-128%);
+        transition: ease-in-out 0.2s;
+    }
+    .MobileMenuActive{
+        transform: translateY(0%);
+    }
+
+    .mobileMenuDivNavUl {
+        margin: 0rem auto 0rem 0rem;
+        width: 100vw;
+        text-align: center;
+    }
+
+    .mobileMenuDivNavLi {
+        font-size: 1.2rem;
+        padding: 1.5rem 2rem;
+        font-weight: 900;
+        border-bottom: 1px solid #ffffff59;
     }
 }

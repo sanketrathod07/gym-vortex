@@ -196,7 +196,7 @@
         width: 80vw;    
     }
     .aboutTextContain {
-        margin-top: 7rem;
+        margin-top: 5rem;
         margin-bottom: 19rem;
         width: 85%;
     }
@@ -225,12 +225,27 @@
         font-size: 5vw;
     }
     .cardsContainer {
-        margin: 9rem 1rem 1rem 1rem;
+        margin: 7rem 1rem 1rem 1rem;
+        flex-direction: column;
     }
     #page3 > p {
         font-size: 4vw;
     }
     #page3 img {
         height: 8vw;
+    }
+    .card {
+        height: 72%;
+        width: 78vw;
+        margin: 1rem 0rem;
+    }
+    .cardsContainer {
+        height: 70vh;
+    }
+    .overlay {
+        padding-top: 1rem;
+    }
+    #green-div h4 {
+        font-size: 1.1rem;
     }
 }

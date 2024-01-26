@@ -296,6 +296,9 @@
     .page1 .arrow {
         bottom: 3%;
     }
+    .page1 {
+        top: 23vh;
+    }
 
 
 
@@ -310,18 +313,20 @@
         display: flex;
         flex-direction: column;
     }
+
     .mapHeader {
         font-size: 5vw;
         text-transform: uppercase;
         margin: 1rem 0rem;
         color: #000;
     }
-    
-    
+
+
     .FooterLogo {
-        height: 30vw;
-        width: 100vw;
+        height: 17vw;
+        width: 63vw;
     }
+
     .FooterLogoMain {
         display: flex;
         flex: 1 1;
@@ -333,12 +338,22 @@
         text-align: center;
         margin: 4rem 0rem;
     }
+
     .FooterDescription {
         color: #000;
         font-size: 4vw;
     }
+
     #footer {
         height: auto;
+    }
+
+    .SubFooter1 {
+        width: 85vw;
+    }
+
+    .scroller-in h4 {
+        font-size: 2rem;
     }
 }
 
