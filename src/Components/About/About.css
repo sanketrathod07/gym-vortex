@@ -5,11 +5,11 @@
     width: 75vw;
     margin: auto;
     justify-content: space-around;
+    opacity: 0;
 }
 
 .aboutImg {
     height: 11vw;
-
     border-radius: 1rem;
 }
 
@@ -47,6 +47,7 @@
     align-items: center;
     position: relative;
     z-index: 10;
+    opacity: 0;
 }
 .card{
     height: 70%;
@@ -195,7 +196,8 @@
         width: 80vw;    
     }
     .aboutTextContain {
-        margin: 9rem 0rem;
+        margin-top: 7rem;
+        margin-bottom: 19rem;
         width: 85%;
     }
     .aboutMainHeader {
@@ -207,17 +209,14 @@
     }
 }
 @media (max-width:700px) {
-    .HomeMain {
-        width: 159%;
-    }
 
     .page2 {
-        width: 157vw;
+        width: 100vw;
     }
 
     .aboutImg {
         height: 55vw;
-        width: 100vw;
+        width: 86vw;
     }
     .aboutMainHeader {
         font-size: 12.2vw;
@@ -227,5 +226,11 @@
     }
     .cardsContainer {
         margin: 9rem 1rem 1rem 1rem;
+    }
+    #page3 > p {
+        font-size: 4vw;
+    }
+    #page3 img {
+        height: 8vw;
     }
 }

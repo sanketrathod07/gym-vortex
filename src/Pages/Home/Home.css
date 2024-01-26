@@ -151,6 +151,7 @@
     position: absolute;
     left: 0;
     height: 100%;
+    width: 100vw;
     z-index: 0;
 }
 
@@ -256,8 +257,8 @@
 
 @media (max-width:700px) {
     .HomeMain {
-        height: 350%;
-        width: 159%;
+        height: 416%;
+        width: 100vw;
     }
 
     .page2 {
@@ -279,15 +280,15 @@
     }
 
     .page1 h1 {
-        font-size: 18.5vw;
+        font-size: 15.5vw;
     }
 
     .page1 h2 {
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     .page1 p {
-        font-size: 4vw;
+        font-size: 3vw;
         font-weight: 500;
         width: 75%;
     }
@@ -338,5 +339,11 @@
     }
     #footer {
         height: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .homeMain {
+        width: 208%;
     }
 }

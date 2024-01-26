@@ -16,6 +16,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
 
+  
+
 
   useEffect(() => {
     gsap.to(".HomeMain", {
@@ -29,8 +31,7 @@ const Home = () => {
         scrub: 2,
       },
     });
-  })
-
+  }, []); 
   return (
     <>
       <video
@@ -85,11 +86,12 @@ const Home = () => {
               <div className="map">
                 <h5 className="mapHeader">Our Location:-</h5>
                 <iframe
+                  title='1'
                   src="https://embed.waze.com/iframe?zoom=14&lat=19.876165&lon=75.343314&ct=livemap"
                   style={{
                     width: '100%',
                     height: '330px',
-                    '@media (max-width: 700px)': {
+                    '@media (maxWidth: 700px)': {
                       width: '100%',
                       height: '330px'
                     }
@@ -100,7 +102,7 @@ const Home = () => {
               </div>
             </div>
             <div className="SubFooter2">
-              
+
             </div>
           </div>
         </div>

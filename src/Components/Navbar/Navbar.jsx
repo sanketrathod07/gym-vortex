@@ -1,31 +1,66 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Import ScrollTrigger
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Navbar.css';
 import Logo from '../../Assests/logo.png';
 
-// Register ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+
+
 
 const Navbar = () => {
+  const navAni = useRef(null);
+
   useEffect(() => {
-    // GSAP Animation
-    gsap.to('.navigationBar', {
-      backgroundColor: '#000000',
-      duration: 0.5,
-      height: '5rem',
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Create a timeline for navbar animation
+    const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: '.navigationBar',
-        scroller: 'body',
+        trigger: '#navigationBar',
         start: 'top -10%',
         end: 'top -11%',
         scrub: 1,
       },
     });
+
+    tl.to('#navigationBar', {
+      backgroundColor: '#000000',
+      duration: 0.5,
+      height: '5rem',
+    });
+
+
+
+
+
+    const cursor = document.querySelector(".cursor");
+    var h4all = document.querySelectorAll(".navigationBar .NavUl .NavLi");
+    console.log(h4all)
+    h4all.forEach(function (elem) {
+      elem.addEventListener("mouseenter", function () {
+        cursor.style.scale = 3;
+        cursor.style.border = "0.5px solid #fff";
+        cursor.style.backgroundColor = "transparent";
+      });
+      elem.addEventListener("mouseleave", function () {
+        cursor.style.scale = 1;
+        cursor.style.border = "0px solid #95C11E";
+        cursor.style.backgroundColor = "#95C11E";
+      });
+    });
+
+    // Cleanup function
+    return () => {
+      // Kill the timeline when component unmounts
+      tl.kill();
+    };
   }, []);
 
+
+
   return (
-    <div className="navigationBar">
+    <div className="navigationBar" id='navigationBar' ref={navAni}>
       <div className="logoDiv">
         <img src={Logo} className='Logo' alt="" />
       </div>
